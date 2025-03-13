@@ -1,4 +1,4 @@
-# Midterm Lab Task 1 - Data Cleaning and Preparation using Excel
+# [Midterm Lab Task 1 - Data Cleaning and Preparation using Excel](https://github.com/user-attachments/files/19228568/ORDONA.xlsx)
 
 For this task we are given a Flat data from Excel (See rawfile) and we are Task to perform Data CLeaning and Preparation
 
