@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Midterm Lab Task 1 - Street Fighter Style</title>
+    <style>
+        /* Street Fighter Theme */
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://cdn.steamstatic.com/steamcommunity/public/images/items/1364780/d8a11446810c7ebce3ca74c5e7e2a2ce689f2f8c.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        /* Loading Screen */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            animation: fadeOut 2s forwards;
+            animation-delay: 3s;
+        }
+
+        .loading-text {
+            color: #ff0;
+            font-size: 24px;
+            animation: blink 0.5s infinite;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border: 3px solid #ff0;
+            box-shadow: 0 0 20px #f00;
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+            animation-delay: 5s;
+        }
+
+        h1, h2 {
+            color: #ff0;
+            text-shadow: 3px 3px #f00;
+            text-transform: uppercase;
+            text-align: center;
+            border-bottom: 2px solid #ff0;
+            padding-bottom: 10px;
+        }
+
+        ul, ol {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 10px 0;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ff0;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        li:hover {
+            transform: translateX(10px);
+            background: rgba(255, 0, 0, 0.3);
+        }
+
+        img {
+            max-width: 100%;
+            border: 3px solid #ff0;
+            margin: 20px 0;
+            box-shadow: 0 0 15px #f00;
+        }
+
+        a {
+            color: #ff0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #f00;
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #ff0;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            margin: 20px 0;
+            box-shadow: 0 0 10px #f00;
+        }
+
+        .download-btn:hover {
+            background: #f00;
+            color: #ff0;
+            transform: scale(1.05);
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; visibility: hidden; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+    </style>
+</head>
+<body>
+    <div class="loading-screen">
+        <div class="loading-text">LOADING...</div>
+    </div>
+
+    <div class="container">
+        <h1>Midterm Lab Task 1</h1>
+        <h2>Data Cleaning and Preparation using Excel</h2>
+
+        <div class="download-section">
+            <a href="https://github.com/user-attachments/files/19228568/ORDONA.xlsx" class="download-btn">
+                Download Excel File
+            </a>
+        </div>
+
+        <p>For this task we are given a Flat data from Excel (See rawfile) and we are Task to perform Data Cleaning and Preparation</p>
+
+        <h2>Step 1: Data Cleaning Process</h2>
+        <ul>
+            <li>Load the raw file</li>
+            <li>Fit Column and row width and height</li>
+            <li>TRIM extra spaces</li>
+            <li>Remove NULL values</li>
+            <li>Remove Duplicates</li>
+        </ul>
+
+        <h2>Step 2: Normalization</h2>
+        <ul>
+            <li>Performed 1NF</li>
+            <li>Perform Table split using 2NF</li>
+            <li>Perform 3 NF</li>
+            <li>Mapped the Normalized tables as a Physical Data Model</li>
+            <li>Raw cleaned Data</li>
+        </ul>
+
+        <h2>Raw Data</h2>
+        <img src="https://github.com/user-attachments/assets/2a4590d4-31c8-4322-ba18-c465dbb2a0f4" alt="Raw Data">
+
+        <h2>Cleaned Data</h2>
+        <img src="https://github.com/user-attachments/assets/9028ae39-775d-42b4-b820-aebc0de9463a" alt="Cleaned Data">
+
+        <h2>Normalization</h2>
+        <img src="https://github.com/user-attachments/assets/cbc72f0b-b5f7-4b88-b874-8586e2e518b8" alt="Normalization">
+
+        <h2>Entity Relationship Diagram</h2>
+        <img src="https://github.com/user-attachments/assets/b9d35318-4586-4104-96fb-a05a694d3877" alt="ERD">
+    </div>
+</body>
+</html>
+
+
